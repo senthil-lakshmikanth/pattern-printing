@@ -306,6 +306,40 @@ int main()
     return 0;
 }
 
+// 1      1
+// 12    21
+// 123  321
+// 12344321
+
+#include <iostream>
+
+using namespace std;
+
+void pattern(int n)
+{
+    for(int i = 1; i <= n; i++)
+    {
+        for(int j = 1; j <= 2*n; j++)
+        {
+            if(j <= i)
+                { cout << j; continue; }
+            if(2*n - j + 1 <= i)
+                { cout << 2*n - j + 1; continue; }
+            
+            cout << " ";
+        }
+            
+        cout << endl;
+    }
+}
+
+int main()
+{
+    pattern(4);   
+
+    return 0;
+}
+
 // Online C++ compiler to run C++ program online
 1
 01
